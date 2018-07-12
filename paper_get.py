@@ -55,7 +55,7 @@ def get_page(url):      #将文档打开并且全部展开
             print('进度：',over_judge(driver),'repeat')
     return driver
 
-def total_paper(url):
+def total_paper(url):       #对已经打开的整个文档页进行分析
     driver=get_page(url)
     all_paper=driver.find_elements_by_class_name('content singlePage wk-container')
     for i in all_paper:
